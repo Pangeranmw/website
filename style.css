@@ -260,7 +260,7 @@ nav a.active, nav a:hover, nav a:active, nav a:focus{
   position: relative;
   opacity: .8;
   border-radius: 20px 20px 0 0;
-  width: 20em;
+  width: 100%;
   height: 20em;
   background-size: cover;
   background-position: center;
@@ -296,6 +296,7 @@ nav a.active, nav a:hover, nav a:active, nav a:focus{
   color: var(--black);
   font-weight: 500;
   font-size: 1.7em;
+  width: 10em;
   word-wrap: break-word;
 }
 .team-card .info p{
