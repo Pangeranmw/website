@@ -142,16 +142,16 @@ nav a.active, nav a:hover, nav a:active, nav a:focus{
   z-index: -10;
 }
 .bg-hero{
-  background: url('assets/bg_hero.png');
+  background: url('https://storage.googleapis.com/dangerdetection.appspot.com/assets/bg_hero.png');
 }
 .bg-feature{
   opacity: .5;
-  background: url('assets/bg_feature.png');
+  background: url('https://storage.googleapis.com/dangerdetection.appspot.com/assets/bg_feature.png');
   height: 100vh;
 }
 .bg-statistic{
   opacity: .3;
-  background: url('assets/bg_stat.png');
+  background: url('https://storage.googleapis.com/dangerdetection.appspot.com/assets/bg_stat.png');
   height: 100vh;
 }
 .hero-section{
