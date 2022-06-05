@@ -278,8 +278,12 @@ nav a.active, nav a:hover, nav a:active, nav a:focus{
   height: 1em;
   margin-right: 0.5em;
 }
-.team-card:hover .image,.team-card:hover .linked-in{
+.team-card:hover .image{
   opacity: .6;
+  transition: all 200ms ease-in-out;
+}
+.team-card:hover .linked-in{
+  opacity: 1;
   transition: all 200ms ease-in-out;
 }
 .team-card:hover{
