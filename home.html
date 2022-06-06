@@ -87,37 +87,7 @@
       <h1 class="mb-0_5">Statistik</h1>
       <p>Kasus kejahatan, kecelakan, dan kebakaran yang berhasil terdeteksi</p>
     </div>
-    <div class="stat-wrapper column">
-      <div class="stat-item row mb-3" data-aos="flip-right">
-        <img class="mr-2" src="assets/img_crime.png" alt="">
-        <div class="kecelakaan column justify-align-baseline">
-          <h2 class="tipe">Kejahatan</h2>
-          <div class="row">
-            <h2 class="mr-0_3">28.000</h2>
-            <h3>Kasus</h3>
-          </div>
-        </div>
-      </div>
-      <div class="row stat-item mb-3" data-aos="flip-left">
-        <img class="mr-2" src="assets/img_fall.png" alt="">
-        <div class="begal column justify-align-baseline">
-          <h2 class="tipe">Kecelakaan</h2>
-          <div class="row">
-            <h2 class="mr-0_3">28.000</h2>
-            <h3>Kasus</h3>
-          </div>
-        </div>
-      </div>
-      <div class="row stat-item" data-aos="flip-left">
-        <img class="mr-2" src="assets/img_fire.png" alt="">
-        <div class="kebakaran column justify-align-baseline">
-          <h2 class="tipe">Kebakaran</h2>
-          <div class="row">
-            <h2 class="mr-0_3">28.000</h2>
-            <h3>Kasus</h3>
-          </div>
-        </div>
-      </div>
+    <div class="stat-wrapper column" id="stat-wrapper">
     </div>
   </div>
   <footer class="row">
@@ -125,8 +95,6 @@
       <img class="mb-1" src="assets/logo-white.svg" alt="">
       <p class="color-white ">Sebuah aplikasi karya sekelompok mahasiswa Program Bangkit 2022 yang diharapkan dapat menjadi solusi dari permasalahan yang beredar di kalangan masyarakat terkait kejadian di jalan berupa aksi begal dan kecelakaan</p>
     </div>
-    <!-- <a class="about" href="about.html"><p class="color-white ">Tentang Kami</p></a>
-    <button>UNDUH VERSI BETA</button> -->
   </footer>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
@@ -136,6 +104,51 @@
       disable: 'mobile',
     });
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="script.js"></script>
+  <script>
+    $.ajax({
+        url: 'https://dangerdetection.et.r.appspot.com/detections/statistic',
+        type: 'get',
+        dataType: 'json',
+        success: function (result) {
+          console.log(result)
+            if(!result.error){
+              $('#stat-wrapper').append(`
+                <div class="stat-item row mb-3" data-aos="flip-right">
+                  <img class="mr-2" src="assets/img_crime.png" alt="">
+                  <div class="kecelakaan column justify-align-baseline">
+                    <h2 class="tipe">Kejahatan</h2>
+                    <div class="row">
+                      <h2 class="mr-0_3">${result.stat.kejahatan}</h2>
+                      <h3>Kasus</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="row stat-item mb-3" data-aos="flip-left">
+                  <img class="mr-2" src="assets/img_fall.png" alt="">
+                  <div class="begal column justify-align-baseline">
+                    <h2 class="tipe">Kecelakaan</h2>
+                    <div class="row">
+                      <h2 class="mr-0_3">${result.stat.kecelakaan}</h2>
+                      <h3>Kasus</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="row stat-item" data-aos="flip-left">
+                  <img class="mr-2" src="assets/img_fire.png" alt="">
+                  <div class="kebakaran column justify-align-baseline">
+                    <h2 class="tipe">Kebakaran</h2>
+                    <div class="row">
+                      <h2 class="mr-0_3">${result.stat.kebakaran}</h2>
+                      <h3>Kasus</h3>
+                    </div>
+                  </div>
+                </div>
+              `)
+            }
+        }
+    });
+  </script>
 </body>
 </html>

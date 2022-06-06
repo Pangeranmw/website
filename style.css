@@ -234,7 +234,7 @@ nav a.active, nav a:hover, nav a:active, nav a:focus{
   padding: 2em;
 }
 .stat-item img{
-  width: 12em;
+  width: 10em;
 }
 .stat-item h2.tipe, .stat-item h3{
   color: var(--black);
