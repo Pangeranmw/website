@@ -136,23 +136,23 @@ nav a.active, nav a:hover, nav a:active, nav a:focus{
   padding-left: 5em;
   padding-right: 5em;
 }
-.bg-style{
-  position: absolute;
-  background-size: cover;
-  z-index: -10;
-}
 .bg-hero{
-  background: url('https://storage.googleapis.com/dangerdetection.appspot.com/assets/bg_hero.png');
+  background: url('assets/bg_hero.png');
+  height: fit-content;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .bg-feature{
-  opacity: .5;
-  background: url('https://storage.googleapis.com/dangerdetection.appspot.com/assets/bg_feature.png');
-  height: 100vh;
+  background: url('assets/bg_feature.png');
+  height: fit-content;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .bg-statistic{
-  opacity: .3;
-  background: url('https://storage.googleapis.com/dangerdetection.appspot.com/assets/bg_stat.png');
-  height: 100vh;
+  background: url('assets/bg_stat.png');
+  height: fit-content;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .hero-section{
   height: 100vh;
@@ -194,8 +194,8 @@ nav a.active, nav a:hover, nav a:active, nav a:focus{
 }
 .feature-section{
   height: fit-content;
-  margin-bottom: 5em;
-  margin-top: 5em;
+  padding-bottom: 5em;
+  padding-top: 5em;
 }
 .feature-left .text{
   width: 80%;
@@ -222,7 +222,6 @@ nav a.active, nav a:hover, nav a:active, nav a:focus{
 .statistic-section{
   padding-bottom: 5em;
   padding-top: 5em;
-  height: fit-content;
 }
 .statistic-section .title{
   margin-bottom: 5em;
@@ -235,7 +234,7 @@ nav a.active, nav a:hover, nav a:active, nav a:focus{
   padding: 2em;
 }
 .stat-item img{
-  width: 30%;
+  width: 12em;
 }
 .stat-item h2.tipe, .stat-item h3{
   color: var(--black);
@@ -259,7 +258,7 @@ nav a.active, nav a:hover, nav a:active, nav a:focus{
 .team-card .image{
   position: relative;
   opacity: 1;
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px 0 20px 0;
   width: 100%;
   height: 20em;
   background-size: cover;
@@ -274,16 +273,28 @@ nav a.active, nav a:hover, nav a:active, nav a:focus{
   border-radius: 0 20px 0 0;
   background-color: #fff;
 }
+.team-card .hover-bg {
+  justify-content: center;
+  opacity: 0;
+  position: absolute;
+  background-color: var(--pink);
+  border-radius: 20px 0 20px 0;
+  width: 100%;
+  height: 20em;
+}
 .team-card .linked-in img{
   height: 1em;
   margin-right: 0.5em;
 }
 .team-card:hover .image{
-  opacity: .6;
   transition: all 200ms ease-in-out;
 }
 .team-card:hover .linked-in{
   opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+.team-card:hover .hover-bg{
+  opacity: .3;
   transition: all 200ms ease-in-out;
 }
 .team-card:hover{
@@ -524,5 +535,17 @@ footer button:hover{
   footer .desc, footer .about{
     width: 100%;
     margin-bottom: 1em;
+  }
+}
+
+@media (min-width:1400px){
+  .statistic-section .stat-wrapper.column {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .stat-item {
+    margin-bottom: 0 !important;
+    margin-right: 2em;
   }
 }
