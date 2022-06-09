@@ -176,7 +176,7 @@ nav a.active, nav a:hover, nav a:active, nav a:focus{
   width: 90%;
 }
 .title-feature{
-  width: 13em;
+  width: 8em;
   margin-bottom: 5em;
 }
 .feature-left{
@@ -190,7 +190,7 @@ nav a.active, nav a:hover, nav a:active, nav a:focus{
   overflow-x: hidden !important;
 }
 .img-feature-portrait{
-  width: 30% !important;
+  width: 25% !important;
 }
 .feature-section{
   height: fit-content;
@@ -201,7 +201,7 @@ nav a.active, nav a:hover, nav a:active, nav a:focus{
   width: 80%;
 }
 .column-feature-portrait{
-  width: 70% !important;
+  width: 75% !important;
 }
 .feature-left .text h2, .feature-left .text p{
   width: 100%;
